@@ -22,14 +22,15 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
       </div>
 
-      {/* Decorative yellow glow */}
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#FFC107]/8 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative glows */}
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{background: 'rgba(45,226,200,0.06)'}} />
+      <div className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full blur-3xl pointer-events-none" style={{background: 'rgba(123,92,246,0.07)'}} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <p className="text-[#FFC107] text-sm font-semibold tracking-[0.2em] uppercase mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-[#FFC107]" />
+          <p className="text-[#2DE2C8] text-sm font-semibold tracking-[0.2em] uppercase mb-6 flex items-center gap-3">
+            <span className="w-8 h-px bg-[#2DE2C8]" />
             Africa's Leading BTL Marketing Agency
           </p>
 
@@ -51,7 +52,8 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 mb-20">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold px-7 py-3.5 rounded transition-all duration-200 hover:shadow-[0_8px_30px_rgba(255,193,7,0.3)]"
+              className="inline-flex items-center gap-2 text-black font-bold px-7 py-3.5 rounded transition-all duration-200 brand-glow"
+              style={{ background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)' }}
             >
               Start Your Project
               <ArrowRight size={16} />
@@ -60,7 +62,7 @@ export default function Hero() {
               href="#work"
               className="inline-flex items-center gap-2 text-white/70 hover:text-white font-medium transition-colors"
             >
-              <span className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#FFC107] transition-colors">
+              <span className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#2DE2C8] transition-colors">
                 <Play size={14} fill="currentColor" />
               </span>
               View Our Work
@@ -71,7 +73,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-display font-black text-4xl text-[#FFC107] leading-none mb-1">
+                <p className="font-display font-black text-4xl leading-none mb-1 text-gradient">
                   {stat.value}
                 </p>
                 <p className="text-white/50 text-sm">{stat.label}</p>

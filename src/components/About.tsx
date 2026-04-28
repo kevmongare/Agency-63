@@ -37,15 +37,15 @@ export default function About() {
             </div>
 
             {/* Floating stat card */}
-            <div className="absolute -bottom-4 -right-4 bg-[#FFC107] text-black p-5 rounded-lg shadow-2xl">
-              <p className="font-display font-black text-4xl leading-none">15+</p>
-              <p className="text-xs font-bold mt-1">Years of Experience</p>
+            <div className="absolute -bottom-4 -right-4 p-5 rounded-lg shadow-2xl text-white" style={{background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)'}}>
+              <p className="font-display font-black text-4xl leading-none text-black">15+</p>
+              <p className="text-xs font-bold mt-1 text-black/80">Years of Experience</p>
             </div>
           </div>
 
           {/* Content */}
           <div>
-            <p className="text-[#FFC107] text-xs font-bold tracking-[0.25em] uppercase mb-4">
+            <p className="text-[#2DE2C8] text-xs font-bold tracking-[0.25em] uppercase mb-4">
               WHO WE ARE
             </p>
             <h2 className="font-display font-black text-5xl md:text-6xl text-white leading-tight mb-6">
@@ -64,7 +64,7 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {pillars.map((p) => (
                 <div key={p.title} className="flex gap-3">
-                  <CheckCircle size={18} className="text-[#FFC107] flex-shrink-0 mt-0.5" />
+                  <CheckCircle size={18} className="text-[#2DE2C8] flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-white font-semibold text-sm mb-1">{p.title}</p>
                     <p className="text-white/45 text-xs leading-relaxed">{p.desc}</p>

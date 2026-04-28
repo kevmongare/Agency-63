@@ -14,7 +14,7 @@ export default function Clients() {
           {[...clients, ...clients].map((name, i) => (
             <span
               key={i}
-              className="font-display font-black text-2xl text-white/15 hover:text-white/40 transition-colors cursor-default flex-shrink-0"
+              className="font-display font-black text-2xl text-white/15 hover:text-[#2DE2C8]/60 transition-colors cursor-default flex-shrink-0"
             >
               {name}
             </span>

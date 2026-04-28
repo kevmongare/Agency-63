@@ -43,9 +43,8 @@ export default function Services() {
   return (
     <section id="services" className="bg-[#0f0f0f] py-24 section-divider">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Label */}
         <div className="mb-14">
-          <p className="text-[#FFC107] text-xs font-bold tracking-[0.25em] uppercase mb-4">
+          <p className="text-[#2DE2C8] text-xs font-bold tracking-[0.25em] uppercase mb-4">
             WHAT WE DO
           </p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -58,7 +57,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
           {services.map((svc) => {
             const Icon = svc.icon;
@@ -67,10 +65,10 @@ export default function Services() {
                 key={svc.title}
                 className="bg-[#0f0f0f] p-8 group hover:bg-[#161616] transition-colors duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#FFC107]/10 flex items-center justify-center mb-6 group-hover:bg-[#FFC107]/20 transition-colors">
-                  <Icon size={22} className="text-[#FFC107]" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300" style={{background: 'rgba(45,226,200,0.08)'}}>
+                  <Icon size={22} className="text-[#2DE2C8] group-hover:text-[#7B5CF6] transition-colors" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-white mb-3 group-hover:text-[#FFC107] transition-colors">
+                <h3 className="font-display font-bold text-xl text-white mb-3 group-hover:text-[#2DE2C8] transition-colors">
                   {svc.title}
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed mb-5">{svc.desc}</p>
@@ -78,7 +76,7 @@ export default function Services() {
                   {svc.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-white/40 border border-white/10 rounded px-2 py-1"
+                      className="text-xs text-[#2DE2C8]/60 border border-[#2DE2C8]/15 rounded px-2 py-1"
                     >
                       {tag}
                     </span>

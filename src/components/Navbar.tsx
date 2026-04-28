@@ -25,11 +25,17 @@ export default function Navbar() {
           <div className="w-9 h-9 relative">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
               <rect width="40" height="40" rx="6" fill="#0f0f0f"/>
-              <text x="4" y="28" fontFamily="Barlow Condensed, sans-serif" fontWeight="800" fontSize="26" fill="#FFC107">63</text>
+              <text x="4" y="28" fontFamily="Barlow Condensed, sans-serif" fontWeight="800" fontSize="26" fill="url(#logoGrad)">63</text>
+              <defs>
+                <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#2DE2C8"/>
+                  <stop offset="100%" stopColor="#7B5CF6"/>
+                </linearGradient>
+              </defs>
             </svg>
           </div>
-          <span className="font-display font-bold text-xl tracking-wide text-white group-hover:text-yellow-400 transition-colors">
-            AGENCY<span className="text-[#FFC107]">63</span>
+          <span className="font-display font-bold text-xl tracking-wide text-white group-hover:text-[#2DE2C8] transition-colors">
+            AGENCY<span className="text-gradient">63</span>
           </span>
         </a>
 
@@ -39,7 +45,7 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200 tracking-wide font-medium"
+              className="text-sm text-white/60 hover:text-[#2DE2C8] transition-colors duration-200 tracking-wide font-medium"
             >
               {link}
             </a>
@@ -49,7 +55,8 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-[#FFC107] text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-[#FFB300] transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 text-black text-sm font-bold px-5 py-2.5 rounded transition-all duration-200"
+          style={{ background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)' }}
         >
           Get A Quote
         </a>
@@ -70,7 +77,7 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-white/70 hover:text-white text-base font-medium transition-colors"
+              className="text-white/70 hover:text-[#2DE2C8] text-base font-medium transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link}
@@ -78,7 +85,8 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="inline-flex justify-center bg-[#FFC107] text-black font-bold py-3 rounded hover:bg-[#FFB300] transition-colors"
+            className="inline-flex justify-center text-black font-bold py-3 rounded transition-colors"
+            style={{ background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)' }}
             onClick={() => setMobileOpen(false)}
           >
             Get A Quote

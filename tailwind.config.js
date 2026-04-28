@@ -5,8 +5,10 @@ export default {
     extend: {
       colors: {
         brand: {
-          yellow: '#2DE2C8', //cyan
-          gold: '#7B5CF6', //violet
+          cyan: '#2DE2C8',
+          violet: '#7B5CF6',
+          magenta: '#E040FB',
+          primary: '#2DE2C8',
         },
         dark: {
           900: '#080808',
@@ -25,5 +27,3 @@ export default {
   },
   plugins: [],
 }
-
-
