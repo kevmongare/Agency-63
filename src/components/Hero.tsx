@@ -13,12 +13,12 @@ export default function Hero() {
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
           style={{
              backgroundImage: `url('/Ageny-63-Safari-Rally.jpeg')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
       </div>
 
