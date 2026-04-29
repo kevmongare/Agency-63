@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{background: 'rgba(45,226,200,0.06)'}} />
       <div className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full blur-3xl pointer-events-none" style={{background: 'rgba(123,92,246,0.07)'}} />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <p className="text-[#2DE2C8] text-sm font-semibold tracking-[0.2em] uppercase mb-6 flex items-center gap-3">
