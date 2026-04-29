@@ -16,36 +16,35 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#080808]/95 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
+        scrolled
+          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-surface-200'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 relative">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <rect width="40" height="40" rx="6" fill="#0f0f0f"/>
-              <text x="4" y="28" fontFamily="Barlow Condensed, sans-serif" fontWeight="800" fontSize="26" fill="url(#logoGrad)">63</text>
-              <defs>
-                <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#2DE2C8"/>
-                  <stop offset="100%" stopColor="#7B5CF6"/>
-                </linearGradient>
-              </defs>
-            </svg>
+
+        {/* Logo mark + wordmark */}
+        <a href="#" className="flex items-center gap-2.5 group">
+          {/* Gradient "63" badge */}
+          <div className="w-9 h-9 rounded-lg bg-brand-gradient flex items-center justify-center shadow-md">
+            <span className="font-display font-black text-white text-lg leading-none tracking-tight">63</span>
           </div>
-          <span className="font-display font-bold text-xl tracking-wide text-white group-hover:text-[#2DE2C8] transition-colors">
-            AGENCY<span className="text-gradient">63</span>
-          </span>
+          <div className="leading-none">
+            <span className="font-display font-black text-xl tracking-widest text-surface-900 group-hover:text-gradient transition-all">
+              AGENCY
+            </span>
+            <span className="font-display font-black text-xl tracking-widest text-gradient">63</span>
+            <p className="text-[9px] tracking-[0.3em] text-surface-500 uppercase font-medium -mt-0.5">The Agency</p>
+          </div>
         </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm text-white/60 hover:text-[#2DE2C8] transition-colors duration-200 tracking-wide font-medium"
+              className="text-sm text-surface-600 hover:text-surface-900 transition-colors font-medium tracking-wide"
             >
               {link}
             </a>
@@ -55,29 +54,25 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 text-black text-sm font-bold px-5 py-2.5 rounded transition-all duration-200"
-          style={{ background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)' }}
+          className="hidden md:inline-flex items-center gap-2 bg-brand-gradient text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow-md hover:opacity-90 hover:shadow-lg transition-all duration-200"
         >
           Get A Quote
         </a>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-white p-1"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden text-surface-700 p-1" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0f0f0f] border-t border-white/5 px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-white border-t border-surface-200 px-6 py-6 flex flex-col gap-5 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-white/70 hover:text-[#2DE2C8] text-base font-medium transition-colors"
+              className="text-surface-700 hover:text-surface-900 text-base font-medium transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link}
@@ -85,8 +80,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="inline-flex justify-center text-black font-bold py-3 rounded transition-colors"
-            style={{ background: 'linear-gradient(135deg, #2DE2C8, #7B5CF6)' }}
+            className="justify-center bg-brand-gradient text-white font-bold py-3 rounded-lg text-center hover:opacity-90 transition-opacity"
             onClick={() => setMobileOpen(false)}
           >
             Get A Quote
